@@ -7,6 +7,7 @@ Libraries used : Keras
 PROCESS:
 
 1.read your dataframe
+
 2.define variable like list of numerical col, target and number of principle components
 3.pass the dataframe through :
    a.data_preprocessing  
