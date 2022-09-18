@@ -17,8 +17,12 @@ PROCESS:
 4.pass the main_X, main_y, test_main_X, test_main_y found in above through createAndSaveModel function
 
 5.Run the below line of codes:
+    
     result_set=[createAndSaveModel(main_X, main_y,test_main_X,test_main_y, 'Model-v0.1'+str(i)+str(j), i,j) for i,j in choice_set]
+    
     res = result_set[0]
+    
     res['predicted'] = res['predicted'].map(lambda x: x[0])
+    
     df.join(res[['actual','predicted']]).to_csv('Results_'+ str(dt.today().date()) + '.csv.gz', compression = 'gzip')
 
