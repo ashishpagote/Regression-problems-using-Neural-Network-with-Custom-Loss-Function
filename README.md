@@ -6,15 +6,17 @@ Libraries used : Keras
 
 PROCESS:
 
-1.read your dataframe
+1.Read your dataframe 
 
-2.define variable like list of numerical col, target and number of principle components
+2.Define variable like list of numerical col, target and number of principle components
 
-3.pass the dataframe through :
-   a.data_preprocessing  
-   b.data_split  
+3.Pass the dataframe through :
 
-4.pass the main_X, main_y, test_main_X, test_main_y found in above through createAndSaveModel function
+    df=data_preprocessing(df,numeric_col_list,n_components,target)
+    
+    main_X, main_y,test_main_X,test_main_y=(df,time_interval,target)
+
+4.Pass the main_X, main_y, test_main_X, test_main_y found in above through createAndSaveModel function
 
 5.Run the below line of codes:
     
